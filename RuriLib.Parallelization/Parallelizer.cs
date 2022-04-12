@@ -22,7 +22,7 @@ namespace RuriLib.Parallelization
         /// The maximum value that the degree of parallelism can have when changed through the
         /// <see cref="Parallelizer{TInput, TOutput}.ChangeDegreeOfParallelism(int)"/> method.
         /// </summary>
-        public int MaxDegreeOfParallelism { get; set; } = 200;
+        public int MaxDegreeOfParallelism { get; set; } = 100000;
 
         /// <summary>
         /// The current status of the parallelizer.
@@ -217,7 +217,7 @@ namespace RuriLib.Parallelization
         /// <param name="skip">The amount of <paramref name="workItems"/> to skip at the beginning</param>
         /// <param name="maxDegreeOfParallelism">The maximum degree of parallelism that can be set</param>
         public Parallelizer(IEnumerable<TInput> workItems, Func<TInput, CancellationToken, Task<TOutput>> workFunction,
-            int degreeOfParallelism, long totalAmount, int skip = 0, int maxDegreeOfParallelism = 200)
+            int degreeOfParallelism, long totalAmount, int skip = 0, int maxDegreeOfParallelism = 100000)
         {
             if (degreeOfParallelism < 1)
                 throw new ArgumentException("The degree of parallelism must be greater than 1");

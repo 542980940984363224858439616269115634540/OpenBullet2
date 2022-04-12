@@ -20,7 +20,7 @@
     <div style="width: 100px;">
         <label style="margin-top: 15px;">@Loc["Bots"]</label>
         <InputNumber TValue="int" Value="Options.Bots" ValueExpression="() => Options.Bots"
-                     ValueChanged="(value) => Options.Bots = Math.Clamp(value, 1, 200)" />
+                     ValueChanged="(value) => Options.Bots = Math.Clamp(value, 1, 100000)" />
     </div>
     <label>@Loc["TimeoutMilliseconds"]</label>
     <div style="width: 100px;">

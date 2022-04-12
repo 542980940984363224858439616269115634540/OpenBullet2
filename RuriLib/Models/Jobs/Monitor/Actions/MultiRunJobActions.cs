@@ -22,7 +22,7 @@ namespace RuriLib.Models.Jobs.Monitor.Actions
 
         public override Task Execute(MultiRunJob job)
         {
-            if (Amount > 0 && Amount <= 200)
+            if (Amount > 0 && Amount <= 100000)
                 job.Bots = Amount;
 
             return Task.CompletedTask;

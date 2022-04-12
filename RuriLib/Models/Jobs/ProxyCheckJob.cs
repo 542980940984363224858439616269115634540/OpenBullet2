@@ -19,7 +19,7 @@ namespace RuriLib.Models.Jobs
     {
         // Options
         public int Bots { get; set; } = 1;
-        public int BotLimit { get; init; } = 200;
+        public int BotLimit { get; init; } = 100000;
         public bool CheckOnlyUntested { get; set; } = true;
         public string Url { get; set; } = "https://google.com";
         public string SuccessKey { get; set; } = "title>Google";
